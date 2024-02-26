@@ -1,7 +1,6 @@
 package com.tobeto.bootcampproject.model.entities;
 
 
-import com.tobeto.bootcampproject.core.mapper.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
@@ -10,17 +9,17 @@ import java.time.LocalDate;
 
 @Getter
 @Setter
-@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
+@SuperBuilder
 @Entity
-@Table(name = "USERS")
+@Table(name = "USERS")//users olması gerekiyor user olamaz keyword olduğu
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract class Users extends BaseEntity {
+public abstract class Users {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "USER_ID")
-    private String id;
+    private Integer id;
     @Column(name = "USER_NAME")
     private String userName;
     @Column(name = "FIRST_NAME")

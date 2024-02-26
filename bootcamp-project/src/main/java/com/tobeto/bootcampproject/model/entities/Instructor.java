@@ -8,9 +8,9 @@ import lombok.experimental.SuperBuilder;
 
 @Getter
 @Setter
-@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
+@SuperBuilder
 @Entity
 @Table(name = "TBL_INSTRUCTOR")
 public class Instructor extends Users {

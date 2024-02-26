@@ -13,7 +13,9 @@ public class BootcampProjectApplication {
 	}
 	@Bean
 	public ModelMapper getModelMapper(){
+
 		return new ModelMapper();
 	}
 
 }
+//aslında bean model mapper her cağırdığımızda yeni bir model mapper oluştruyoruz.
